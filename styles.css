@@ -355,13 +355,25 @@ a { color: inherit; }
   flex-shrink: 0;
 }
 .gallery figcaption {
-  padding: 10px 14px 14px;
-  font-size: 0.8rem;
-  line-height: 1.45;
-  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px 14px;
   margin-top: auto;
+  border-top: 1px solid var(--border);
 }
-.credit { display: block; margin-top: 3px; color: var(--ink-faint); font-size: 0.75rem; }
+.cap-title {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.cap-credit {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-faint);
+}
 
 .video-wrap {
   position: relative;
