@@ -355,7 +355,10 @@ a { color: inherit; }
   flex-shrink: 0;
 }
 .gallery figcaption {
-  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  min-height: 3.4em;
+  padding: 0 14px;
   margin-top: auto;
   border-top: 1px solid var(--border);
 }
@@ -366,6 +369,10 @@ a { color: inherit; }
   color: var(--ink);
   line-height: 1.3;
   letter-spacing: -0.005em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .video-wrap {
