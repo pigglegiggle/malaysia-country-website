@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌺</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,55 +17,68 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle topic menu">
-      <span></span><span></span><span></span>
+    <a class="brand" href="#top">Malaysia</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open topic menu">
+      <span>Menu</span>
+      <span class="nav-toggle-lines"><i></i><i></i><i></i></span>
     </button>
-    <a class="brand" href="#top">
-      <svg class="brand-hibiscus" viewBox="0 0 64 64" aria-hidden="true"><use href="#hibiscus"/></svg>
-      <span>Malaysia</span>
-    </a>
   </div>
 </header>
 
-<div class="nav-backdrop" id="navBackdrop" hidden></div>
+<nav class="nav-overlay" id="primaryNav" aria-label="Topics">
+  <div class="nav-overlay-inner">
+    <div class="nav-overlay-top">
+      <span class="nav-overlay-label">All topics</span>
+      <button class="nav-close" id="navClose" aria-label="Close menu">Close ✕</button>
+    </div>
+    <ol>
+      <li><a href="#topic-001"><span class="n">001</span><span class="t">Asian Country</span></a></li>
+      <li><a href="#topic-002"><span class="n">002</span><span class="t">Population</span></a></li>
+      <li><a href="#topic-003"><span class="n">003</span><span class="t">Languages</span></a></li>
+      <li><a href="#topic-004"><span class="n">004</span><span class="t">Leadership</span></a></li>
+      <li><a href="#topic-005"><span class="n">005</span><span class="t">Festivals</span></a></li>
+      <li><a href="#topic-006"><span class="n">006</span><span class="t">Sports</span></a></li>
+      <li><a href="#topic-007"><span class="n">007</span><span class="t">Entertainment</span></a></li>
+      <li><a href="#topic-008"><span class="n">008</span><span class="t">Dress</span></a></li>
+      <li><a href="#topic-009"><span class="n">009</span><span class="t">Health</span></a></li>
+      <li><a href="#topic-010"><span class="n">010</span><span class="t">Personality</span></a></li>
+      <li><a href="#topic-011"><span class="n">011</span><span class="t">Communication</span></a></li>
+      <li><a href="#topic-012"><span class="n">012</span><span class="t">Environment</span></a></li>
+    </ol>
+  </div>
+</nav>
 
 <div id="top"></div>
+
 <section class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">An Asian Country Introduction</p>
-    <h1>Malaysia, <span>Truly Asia</span></h1>
-    <p class="hero-lede">A multicultural nation of Malay, Chinese, Indian and indigenous peoples, joined by rainforest, coastline, and a shared home in Southeast Asia. Explore 12 topics below.</p>
-    <a class="hero-cta" href="#topic-001">Start exploring</a>
+  <div class="hero-text">
+    <p class="eyebrow">01 — Asian Country Introduction</p>
+    <h1>Malaysia<br>is <span>truly Asia.</span></h1>
+    <p class="hero-lede">A multicultural nation of Malay, Chinese, Indian and indigenous peoples, joined by rainforest, coastline, and a shared home in Southeast Asia. 12 topics, real photos and film below.</p>
+    <div class="hero-actions">
+      <a class="hero-cta" href="#topic-001">Start exploring</a>
+      <a class="hero-cta-ghost" href="#topic-012">Jump to environment</a>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Kuala_Lumpur%27s_skyline_dominated_by_the_Petronas_Towers_%2818977925005%29.jpg" alt="Kuala Lumpur's skyline, dominated by the Petronas Towers" width="900" height="600">
+    <span class="hero-media-badge">Kuala Lumpur</span>
   </div>
 </section>
-
-<div class="layout">
-<nav class="sidebar" id="primaryNav" aria-label="Topics">
-  <p class="sidebar-title">Topics</p>
-  <ol>
-    <li><a href="#topic-001"><span class="n">001</span> Asian Country</a></li>
-    <li><a href="#topic-002"><span class="n">002</span> Population</a></li>
-    <li><a href="#topic-003"><span class="n">003</span> Languages</a></li>
-    <li><a href="#topic-004"><span class="n">004</span> Leadership</a></li>
-    <li><a href="#topic-005"><span class="n">005</span> Festivals</a></li>
-    <li><a href="#topic-006"><span class="n">006</span> Sports</a></li>
-    <li><a href="#topic-007"><span class="n">007</span> Entertainment</a></li>
-    <li><a href="#topic-008"><span class="n">008</span> Dress</a></li>
-    <li><a href="#topic-009"><span class="n">009</span> Health</a></li>
-    <li><a href="#topic-010"><span class="n">010</span> Personality</a></li>
-    <li><a href="#topic-011"><span class="n">011</span> Communication</a></li>
-    <li><a href="#topic-012"><span class="n">012</span> Environment</a></li>
-  </ol>
-</nav>
 
 <main id="main">
 
   <section class="topic" id="topic-001" aria-labelledby="h-001">
+    <span class="topic-ghost" aria-hidden="true">001</span>
     <div class="topic-inner">
-      <p class="topic-num">001</p>
-      <h2 id="h-001">Asian Country</h2>
-      <p class="topic-copy">Malaysia is a federal constitutional monarchy in Southeast Asia, split between Peninsular Malaysia and East Malaysia on the island of Borneo. Its capital is Kuala Lumpur, home of the iconic Petronas Twin Towers. The national flag, the <em>Jalur Gemilang</em> ("Stripes of Glory"), carries 14 red-and-white stripes and a crescent with a 14-point star.</p>
-      <div class="gallery">
+      <div class="topic-grid">
+        <div class="topic-text">
+          <p class="topic-num">001</p>
+          <h2 id="h-001">Asian Country</h2>
+          <p class="topic-copy">Malaysia is a federal constitutional monarchy in Southeast Asia, split between Peninsular Malaysia and East Malaysia on the island of Borneo. Its capital is Kuala Lumpur, home of the iconic Petronas Twin Towers. The national flag, the <em>Jalur Gemilang</em> ("Stripes of Glory"), carries 14 red-and-white stripes and a crescent with a 14-point star.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg" alt="The national flag of Malaysia (Jalur Gemilang)" loading="eager" width="800" height="400">
           <figcaption>Flag of Malaysia — <span class="credit">MapGrid and others, Wikimedia Commons, Public Domain</span></figcaption>
@@ -75,19 +88,26 @@
           <figcaption>Malaysia's location in the world — <span class="credit">TUBS, Wikimedia Commons, CC BY-SA 3.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/vn4Bp22hWxs" title="Malaysia Truly Asia TVC Global" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/vn4Bp22hWxs" title="Malaysia Truly Asia TVC Global" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"Malaysia Truly Asia TVC Global" — Malaysia Truly Asia (Tourism Malaysia)</p>
+        </div>
       </div>
-      <p class="video-credit">"Malaysia Truly Asia TVC Global" — Malaysia Truly Asia (Tourism Malaysia)</p>
     </div>
   </section>
 
-  <section class="topic alt" id="topic-002" aria-labelledby="h-002">
+  <section class="topic dark" id="topic-002" aria-labelledby="h-002">
+    <span class="topic-ghost" aria-hidden="true">002</span>
     <div class="topic-inner">
-      <p class="topic-num">002</p>
-      <h2 id="h-002">Population</h2>
-      <p class="topic-copy">Malaysia is home to roughly 34 million people. Ethnic Malays and other indigenous <em>Bumiputera</em> groups form the majority, alongside large Chinese and Indian communities and a smaller number of other groups — a mix reflected daily in language, food, and festival life. Most of the population is concentrated in Peninsular Malaysia, with Kuala Lumpur and the surrounding Klang Valley as the most densely populated urban region.</p>
-      <div class="gallery">
+      <div class="topic-grid media-first">
+        <div class="topic-text">
+          <p class="topic-num">002</p>
+          <h2 id="h-002">Population</h2>
+          <p class="topic-copy">Malaysia is home to roughly 34 million people. Ethnic Malays and other indigenous <em>Bumiputera</em> groups form the majority, alongside large Chinese and Indian communities and a smaller number of other groups — a mix reflected daily in language, food, and festival life. Most of the population is concentrated in Peninsular Malaysia, with Kuala Lumpur and the surrounding Klang Valley as the most densely populated urban region.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Malaysia_ethnic_group_demographic.jpg" alt="Chart of Malaysia's ethnic group demographic breakdown" loading="lazy" width="800" height="600">
           <figcaption>Ethnic group breakdown — <span class="credit">Apluswiki, Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
@@ -97,19 +117,26 @@
           <figcaption>Kuala Lumpur, the most populous urban centre — <span class="credit">Jorge Láscar, Wikimedia Commons, CC BY 2.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/dV-H1EKmCxA" title="Geography Now! MALAYSIA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/dV-H1EKmCxA" title="Geography Now! MALAYSIA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"Geography Now! MALAYSIA" — Geography Now</p>
+        </div>
       </div>
-      <p class="video-credit">"Geography Now! MALAYSIA" — Geography Now</p>
     </div>
   </section>
 
   <section class="topic" id="topic-003" aria-labelledby="h-003">
+    <span class="topic-ghost" aria-hidden="true">003</span>
     <div class="topic-inner">
-      <p class="topic-num">003</p>
-      <h2 id="h-003">Languages and Dialects</h2>
-      <p class="topic-copy"><em>Bahasa Malaysia</em> (Standard Malay) is the national and official language, written in the Rumi (Latin) script and historically in Jawi (Arabic-derived) script. English is widely spoken, especially in business and cities. Mandarin and other Chinese dialects (Cantonese, Hokkien, Hakka), Tamil, and numerous indigenous languages of Borneo are also spoken — many Malaysians grow up comfortably switching between two or three languages.</p>
-      <div class="gallery">
+      <div class="topic-grid">
+        <div class="topic-text">
+          <p class="topic-num">003</p>
+          <h2 id="h-003">Languages and Dialects</h2>
+          <p class="topic-copy"><em>Bahasa Malaysia</em> (Standard Malay) is the national and official language, written in the Rumi (Latin) script and historically in Jawi (Arabic-derived) script. English is widely spoken, especially in business and cities. Mandarin and other Chinese dialects (Cantonese, Hokkien, Hakka), Tamil, and numerous indigenous languages of Borneo are also spoken — many Malaysians grow up comfortably switching between two or three languages.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/RojakSignboard.JPG" alt="Malaysian shop signboard with Chinese, English, Malay, and Tamil text" loading="lazy" width="800" height="600">
           <figcaption>A signboard mixing four languages — <span class="credit">L_joo, Wikimedia Commons, Public Domain</span></figcaption>
@@ -119,19 +146,26 @@
           <figcaption>Malay in Rumi and Jawi script — <span class="credit">Wong Chin Huat &amp; Robert Lip Seng Kee, Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/70nxZpblKws" title="The Malay Language (Bahasa Melayu)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/70nxZpblKws" title="The Malay Language (Bahasa Melayu)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"The Malay Language (Bahasa Melayu)" — Langfocus</p>
+        </div>
       </div>
-      <p class="video-credit">"The Malay Language (Bahasa Melayu)" — Langfocus</p>
     </div>
   </section>
 
-  <section class="topic alt" id="topic-004" aria-labelledby="h-004">
+  <section class="topic dark" id="topic-004" aria-labelledby="h-004">
+    <span class="topic-ghost" aria-hidden="true">004</span>
     <div class="topic-inner">
-      <p class="topic-num">004</p>
-      <h2 id="h-004">Political Leadership</h2>
-      <p class="topic-copy">Malaysia is a federal constitutional monarchy: the ceremonial head of state, the <em>Yang di-Pertuan Agong</em> (King), is elected every five years by rotation among the nine hereditary Malay rulers. Executive power sits with the Prime Minister and cabinet, accountable to the Dewan Rakyat (House of Representatives). Anwar Ibrahim has served as Malaysia's Prime Minister since November 2022.</p>
-      <div class="gallery">
+      <div class="topic-grid media-first">
+        <div class="topic-text">
+          <p class="topic-num">004</p>
+          <h2 id="h-004">Political Leadership</h2>
+          <p class="topic-copy">Malaysia is a federal constitutional monarchy: the ceremonial head of state, the <em>Yang di-Pertuan Agong</em> (King), is elected every five years by rotation among the nine hereditary Malay rulers. Executive power sits with the Prime Minister and cabinet, accountable to the Dewan Rakyat (House of Representatives). Anwar Ibrahim has served as Malaysia's Prime Minister since November 2022.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Anwar_Ibrahim_June_2025.jpg" alt="Anwar Ibrahim, Prime Minister of Malaysia, photographed June 2025" loading="lazy" width="800" height="600">
           <figcaption>Anwar Ibrahim, Prime Minister of Malaysia — <span class="credit">Laily Rachev / Indonesian Presidential Secretariat, Wikimedia Commons, Public Domain</span></figcaption>
@@ -141,19 +175,26 @@
           <figcaption>Dewan Rakyat, the Parliament of Malaysia — <span class="credit">Wee Hong, Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/xQ43NC2tkO4" title="[LIVE] Malaysia swears in Anwar Ibrahim as new prime minister" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/xQ43NC2tkO4" title="[LIVE] Malaysia swears in Anwar Ibrahim as new prime minister" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"Malaysia swears in Anwar Ibrahim as new prime minister" — CNA (Channel News Asia)</p>
+        </div>
       </div>
-      <p class="video-credit">"Malaysia swears in Anwar Ibrahim as new prime minister" — CNA (Channel News Asia)</p>
     </div>
   </section>
 
   <section class="topic" id="topic-005" aria-labelledby="h-005">
+    <span class="topic-ghost" aria-hidden="true">005</span>
     <div class="topic-inner">
-      <p class="topic-num">005</p>
-      <h2 id="h-005">Cultural Festivals</h2>
-      <p class="topic-copy">Malaysia's festival calendar mirrors its diversity: <em>Hari Raya Aidilfitri</em> marks the end of Ramadan with open houses and Ramadan bazaars; <em>Chinese New Year</em> brings lion dances and reunion dinners; <em>Deepavali</em> lights up neighbourhoods with oil lamps and kolam art; and Christmas is celebrated among Malaysia's Christian communities, especially in Sabah and Sarawak. Public holidays for each mean the whole country often joins the celebration.</p>
-      <div class="gallery">
+      <div class="topic-grid">
+        <div class="topic-text">
+          <p class="topic-num">005</p>
+          <h2 id="h-005">Cultural Festivals</h2>
+          <p class="topic-copy">Malaysia's festival calendar mirrors its diversity: <em>Hari Raya Aidilfitri</em> marks the end of Ramadan with open houses and Ramadan bazaars; <em>Chinese New Year</em> brings lion dances and reunion dinners; <em>Deepavali</em> lights up neighbourhoods with oil lamps and kolam art; and Christmas is celebrated among Malaysia's Christian communities, especially in Sabah and Sarawak. Public holidays for each mean the whole country often joins the celebration.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Deepavali_kolam_with_lights_in_Malaysia.jpg" alt="A decorative Deepavali kolam with oil lamps, Malaysia" loading="lazy" width="800" height="533">
           <figcaption>A Deepavali kolam with oil lamps — <span class="credit">John Ragai, Wikimedia Commons, CC BY 2.0</span></figcaption>
@@ -163,19 +204,26 @@
           <figcaption>A Ramadan bazaar ahead of Hari Raya — <span class="credit">angys, Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/LKUiQvuzrfA" title="The Soul of Malaysia (Malaysia Truly Asia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/LKUiQvuzrfA" title="The Soul of Malaysia (Malaysia Truly Asia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"The Soul of Malaysia" — Malaysia Truly Asia (Tourism Malaysia)</p>
+        </div>
       </div>
-      <p class="video-credit">"The Soul of Malaysia" — Malaysia Truly Asia (Tourism Malaysia)</p>
     </div>
   </section>
 
-  <section class="topic alt" id="topic-006" aria-labelledby="h-006">
+  <section class="topic dark" id="topic-006" aria-labelledby="h-006">
+    <span class="topic-ghost" aria-hidden="true">006</span>
     <div class="topic-inner">
-      <p class="topic-num">006</p>
-      <h2 id="h-006">Traditional Sports</h2>
-      <p class="topic-copy"><em>Sepak takraw</em>, a fast, acrobatic game played with a rattan ball using feet, knees, chest and head instead of hands, is a Malaysian national sport that has grown into a regional and world competition. <em>Silat</em> (pencak silat), a traditional martial art rooted in Malay culture, blends self-defence, dance and ceremony, and is contested internationally, including at the SEA Games.</p>
-      <div class="gallery">
+      <div class="topic-grid media-first">
+        <div class="topic-text">
+          <p class="topic-num">006</p>
+          <h2 id="h-006">Traditional Sports</h2>
+          <p class="topic-copy"><em>Sepak takraw</em>, a fast, acrobatic game played with a rattan ball using feet, knees, chest and head instead of hands, is a Malaysian national sport that has grown into a regional and world competition. <em>Silat</em> (pencak silat), a traditional martial art rooted in Malay culture, blends self-defence, dance and ceremony, and is contested internationally, including at the SEA Games.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pasukan_Sepak_Takraw_Hamid_Mydin_-1.jpg" alt="Historical photo of a Malaysian sepak takraw team" loading="lazy" width="800" height="600">
           <figcaption>A Malaysian sepak takraw team — <span class="credit">Sazrol, Wikimedia Commons, CC BY-SA 3.0</span></figcaption>
@@ -185,19 +233,26 @@
           <figcaption>Women's pencak silat final, 2011 SEA Games — <span class="credit">Gunkarta, crop by Sven Manguard, Wikimedia Commons, CC BY-SA 3.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/Cd61w5hpB4s" title="Match Highlight Day 6 - ISTAF Sepaktakraw World Cup Kuala Lumpur 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/Cd61w5hpB4s" title="Match Highlight Day 6 - ISTAF Sepaktakraw World Cup Kuala Lumpur 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"ISTAF Sepaktakraw World Cup Kuala Lumpur 2024, Day 6 Highlights" — We Are Sepaktakraw</p>
+        </div>
       </div>
-      <p class="video-credit">"ISTAF Sepaktakraw World Cup Kuala Lumpur 2024, Day 6 Highlights" — We Are Sepaktakraw</p>
     </div>
   </section>
 
   <section class="topic" id="topic-007" aria-labelledby="h-007">
+    <span class="topic-ghost" aria-hidden="true">007</span>
     <div class="topic-inner">
-      <p class="topic-num">007</p>
-      <h2 id="h-007">Local Entertainment</h2>
-      <p class="topic-copy">Malaysia's modern entertainment scene traces back to P. Ramlee, the legendary actor, director, and composer of the 1950s–60s "golden age" of Malay cinema, whose films and songs remain beloved today. Contemporary Malaysia has a lively film, television and pop-music industry, alongside a thriving live-music and festival circuit spanning Malay, Chinese, Indian, and English-language performances.</p>
-      <div class="gallery">
+      <div class="topic-grid">
+        <div class="topic-text">
+          <p class="topic-num">007</p>
+          <h2 id="h-007">Local Entertainment</h2>
+          <p class="topic-copy">Malaysia's modern entertainment scene traces back to P. Ramlee, the legendary actor, director, and composer of the 1950s–60s "golden age" of Malay cinema, whose films and songs remain beloved today. Contemporary Malaysia has a lively film, television and pop-music industry, alongside a thriving live-music and festival circuit spanning Malay, Chinese, Indian, and English-language performances.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Rumah_Kelahiran_P._Ramlee.jpg" alt="The birthplace house of P. Ramlee, Malaysia's legendary actor-filmmaker" loading="lazy" width="800" height="600">
           <figcaption>Birthplace of P. Ramlee, Penang — <span class="credit">Firzazul, Wikimedia Commons, CC0</span></figcaption>
@@ -207,19 +262,26 @@
           <figcaption>P. Ramlee in Dunia Film magazine, 1954 — <span class="credit">Digitized by Chris Woodrich, Wikimedia Commons, Public Domain</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/jVAVdQ_sboU" title="P. Ramlee Remembered (1928-1973)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/jVAVdQ_sboU" title="P. Ramlee Remembered (1928-1973)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"P. Ramlee Remembered (1928-1973)" — The Star</p>
+        </div>
       </div>
-      <p class="video-credit">"P. Ramlee Remembered (1928-1973)" — The Star</p>
     </div>
   </section>
 
-  <section class="topic alt" id="topic-008" aria-labelledby="h-008">
+  <section class="topic dark" id="topic-008" aria-labelledby="h-008">
+    <span class="topic-ghost" aria-hidden="true">008</span>
     <div class="topic-inner">
-      <p class="topic-num">008</p>
-      <h2 id="h-008">Asian Beauty — Traditional Dress</h2>
-      <p class="topic-copy">Malaysia's traditional dress is a craft as much as a costume. <em>Batik</em>, hand-drawn or stamped wax-resist fabric, produces intricate, colourful patterns. <em>Songket</em>, a handwoven fabric shot through with gold or silver thread, is reserved for formal and ceremonial wear. Everyday traditional outfits include the flowing <em>baju kurung</em> for women and the <em>baju Melayu</em> for men, still worn widely during festivals and official occasions.</p>
-      <div class="gallery">
+      <div class="topic-grid media-first">
+        <div class="topic-text">
+          <p class="topic-num">008</p>
+          <h2 id="h-008">Asian Beauty — Traditional Dress</h2>
+          <p class="topic-copy">Malaysia's traditional dress is a craft as much as a costume. <em>Batik</em>, hand-drawn or stamped wax-resist fabric, produces intricate, colourful patterns. <em>Songket</em>, a handwoven fabric shot through with gold or silver thread, is reserved for formal and ceremonial wear. Everyday traditional outfits include the flowing <em>baju kurung</em> for women and the <em>baju Melayu</em> for men, still worn widely during festivals and official occasions.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/2_Malay_girls_in_baju_kurung.jpg" alt="Two Malay girls wearing traditional baju kurung" loading="lazy" width="800" height="600">
           <figcaption>Traditional baju kurung — <span class="credit">Sham Hardy, Wikimedia Commons, CC BY-SA 2.0</span></figcaption>
@@ -229,19 +291,26 @@
           <figcaption>Weaving songket in Kelantan, 1899 — <span class="credit">Walter William Skeat, Museum of Archaeology and Anthropology Cambridge, Wikimedia Commons, CC0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/gdD4JuJ4O7s" title="Making of Malaysian Batik | Step by Step Process | Jadi Batek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/gdD4JuJ4O7s" title="Making of Malaysian Batik | Step by Step Process | Jadi Batek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"Making of Malaysian Batik | Step by Step Process" — Jadi Batek</p>
+        </div>
       </div>
-      <p class="video-credit">"Making of Malaysian Batik | Step by Step Process" — Jadi Batek</p>
     </div>
   </section>
 
   <section class="topic" id="topic-009" aria-labelledby="h-009">
+    <span class="topic-ghost" aria-hidden="true">009</span>
     <div class="topic-inner">
-      <p class="topic-num">009</p>
-      <h2 id="h-009">Health and Wellness</h2>
-      <p class="topic-copy">Malaysia runs a dual public-private healthcare system: heavily subsidised public hospitals and clinics operate alongside a large private sector, and the country is a well-regarded medical-tourism destination. Traditional and complementary medicine — including Malay, Chinese, and Ayurvedic practices — remains widely used and is officially regulated alongside modern medicine.</p>
-      <div class="gallery">
+      <div class="topic-grid">
+        <div class="topic-text">
+          <p class="topic-num">009</p>
+          <h2 id="h-009">Health and Wellness</h2>
+          <p class="topic-copy">Malaysia runs a dual public-private healthcare system: heavily subsidised public hospitals and clinics operate alongside a large private sector, and the country is a well-regarded medical-tourism destination. Traditional and complementary medicine — including Malay, Chinese, and Ayurvedic practices — remains widely used and is officially regulated alongside modern medicine.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Hospital_%28malaysia%29.jpg" alt="Exterior view of a public hospital in Malaysia" loading="lazy" width="800" height="600">
           <figcaption>A public hospital in Malaysia — <span class="credit">Fiq Shafiq, Wikimedia Commons, CC BY-SA 3.0</span></figcaption>
@@ -251,19 +320,26 @@
           <figcaption>Kuala Lumpur Hospital — <span class="credit">Chongkian, Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/3Xc0AMC5h0I" title="Traditional Medicine to Care: The Fight to Save Malaysia's Ancient Healing Heritage" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/3Xc0AMC5h0I" title="Traditional Medicine to Care: The Fight to Save Malaysia's Ancient Healing Heritage" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"Traditional Medicine to Care — Malaysia's Ancient Healing Heritage" — PurplePerfect Video Production</p>
+        </div>
       </div>
-      <p class="video-credit">"Traditional Medicine to Care — Malaysia's Ancient Healing Heritage" — PurplePerfect Video Production</p>
     </div>
   </section>
 
-  <section class="topic alt" id="topic-010" aria-labelledby="h-010">
+  <section class="topic dark" id="topic-010" aria-labelledby="h-010">
+    <span class="topic-ghost" aria-hidden="true">010</span>
     <div class="topic-inner">
-      <p class="topic-num">010</p>
-      <h2 id="h-010">Personality</h2>
-      <p class="topic-copy">Warmth, hospitality, and a relaxed multicultural ease are often cited as defining Malaysian character. Neighbours of different faiths and ethnicities regularly celebrate one another's festivals through "open house" visits, and food is a universal social language. National pride runs high each August around <em>Hari Merdeka</em> (Independence Day), when streets fill with flags and parades — a vivid expression of unity across a genuinely diverse population.</p>
-      <div class="gallery">
+      <div class="topic-grid media-first">
+        <div class="topic-text">
+          <p class="topic-num">010</p>
+          <h2 id="h-010">Personality</h2>
+          <p class="topic-copy">Warmth, hospitality, and a relaxed multicultural ease are often cited as defining Malaysian character. Neighbours of different faiths and ethnicities regularly celebrate one another's festivals through "open house" visits, and food is a universal social language. National pride runs high each August around <em>Hari Merdeka</em> (Independence Day), when streets fill with flags and parades — a vivid expression of unity across a genuinely diverse population.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Merdeka_Day_Parade_08_-_57.jpg" alt="Jubilant crowd celebrating Merdeka Day at Dataran Merdeka, Kuala Lumpur" loading="lazy" width="800" height="533">
           <figcaption>Merdeka Day celebrations, Kuala Lumpur — <span class="credit">Amru Zainal Abidin, Wikimedia Commons, CC BY 2.0</span></figcaption>
@@ -273,19 +349,26 @@
           <figcaption>Hari Merdeka parade, Kota Kinabalu, Sabah — <span class="credit">CEphoto, Uwe Aranas, Wikimedia Commons, CC BY-SA 3.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/6UguPyZalgI" title="VISIT MALAYSIA 2020 - THIS IS MALAYSIA, A TRULY ASIA!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/6UguPyZalgI" title="VISIT MALAYSIA 2020 - THIS IS MALAYSIA, A TRULY ASIA!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"This Is Malaysia, A Truly Asia!" — SKYRUN MALAYSIA</p>
+        </div>
       </div>
-      <p class="video-credit">"This Is Malaysia, A Truly Asia!" — SKYRUN MALAYSIA</p>
     </div>
   </section>
 
   <section class="topic" id="topic-011" aria-labelledby="h-011">
+    <span class="topic-ghost" aria-hidden="true">011</span>
     <div class="topic-inner">
-      <p class="topic-num">011</p>
-      <h2 id="h-011">Communication</h2>
-      <p class="topic-copy">A handshake or a slight bow with a hand to the chest is common when greeting, and "Salam" is a respectful gesture especially with elders. Malaysians often greet with "Apa khabar?" (How are you?) and mix languages fluidly mid-conversation — a habit locals call "rojak" (mixed) speech. Everyday social hubs like kopitiams (coffee shops) and markets are where much of this cross-cultural communication happens face to face.</p>
-      <div class="gallery">
+      <div class="topic-grid">
+        <div class="topic-text">
+          <p class="topic-num">011</p>
+          <h2 id="h-011">Communication</h2>
+          <p class="topic-copy">A handshake or a slight bow with a hand to the chest is common when greeting, and "Salam" is a respectful gesture especially with elders. Malaysians often greet with "Apa khabar?" (How are you?) and mix languages fluidly mid-conversation — a habit locals call "rojak" (mixed) speech. Everyday social hubs like kopitiams (coffee shops) and markets are where much of this cross-cultural communication happens face to face.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Central_Market%2C_Kuala_Lumpur.jpg" alt="Central Market, Kuala Lumpur, a hub of everyday social interaction" loading="lazy" width="800" height="533">
           <figcaption>Central Market, Kuala Lumpur — <span class="credit">Wee Hong, Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
@@ -295,19 +378,26 @@
           <figcaption>A traditional Malaysian kopitiam — <span class="credit">Dr.Francostein1975, Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/NrWg6Coa_q0" title="Greetings Amongst the Malaysian Culture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/NrWg6Coa_q0" title="Greetings Amongst the Malaysian Culture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"Greetings Amongst the Malaysian Culture" — The City of Millionaires</p>
+        </div>
       </div>
-      <p class="video-credit">"Greetings Amongst the Malaysian Culture" — The City of Millionaires</p>
     </div>
   </section>
 
-  <section class="topic alt" id="topic-012" aria-labelledby="h-012">
+  <section class="topic dark" id="topic-012" aria-labelledby="h-012">
+    <span class="topic-ghost" aria-hidden="true">012</span>
     <div class="topic-inner">
-      <p class="topic-num">012</p>
-      <h2 id="h-012">Environment</h2>
-      <p class="topic-copy">Malaysia sits within one of the world's oldest rainforest ecosystems — Taman Negara is estimated at over 130 million years old. Borneo's forests, including the Sepilok Orangutan Rehabilitation Centre in Sabah, protect endangered species like the orangutan and Bornean pygmy elephant. Rapid deforestation for agriculture remains a major conservation challenge, met by a growing network of national parks and protected reserves.</p>
-      <div class="gallery">
+      <div class="topic-grid media-first">
+        <div class="topic-text">
+          <p class="topic-num">012</p>
+          <h2 id="h-012">Environment</h2>
+          <p class="topic-copy">Malaysia sits within one of the world's oldest rainforest ecosystems — Taman Negara is estimated at over 130 million years old. Borneo's forests, including the Sepilok Orangutan Rehabilitation Centre in Sabah, protect endangered species like the orangutan and Bornean pygmy elephant. Rapid deforestation for agriculture remains a major conservation challenge, met by a growing network of national parks and protected reserves.</p>
+        </div>
+        <div class="topic-media">
+          <div class="gallery">
         <figure>
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Taman_Negara_Canopy_Walkway.JPG" alt="The rainforest canopy walkway at Taman Negara National Park" loading="lazy" width="800" height="600">
           <figcaption>Canopy walkway, Taman Negara — <span class="credit">RoB, Wikimedia Commons, CC BY-SA 3.0</span></figcaption>
@@ -317,37 +407,24 @@
           <figcaption>Sepilok Orangutan Rehabilitation Centre, Sabah — <span class="credit">CEphoto, Uwe Aranas, Wikimedia Commons, CC BY-SA 3.0</span></figcaption>
         </figure>
       </div>
-      <div class="video-wrap">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/iA9-KcsY_gA" title="Forgotten Forests of Malaysia | Free Documentary Nature" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/iA9-KcsY_gA" title="Forgotten Forests of Malaysia | Free Documentary Nature" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-credit">"Forgotten Forests of Malaysia" — Free Documentary – Nature</p>
+        </div>
       </div>
-      <p class="video-credit">"Forgotten Forests of Malaysia" — Free Documentary – Nature</p>
     </div>
   </section>
 
 </main>
-</div>
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <svg class="brand-hibiscus" viewBox="0 0 64 64" aria-hidden="true"><use href="#hibiscus"/></svg>
+    <p class="footer-brand">Malaysia</p>
     <p>Made for a school project introducing Malaysia. Images from Wikimedia Commons (credited under each photo); videos embedded from YouTube.</p>
     <a href="#top">Back to top ↑</a>
   </div>
 </footer>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="hibiscus" viewBox="0 0 64 64">
-      <g fill="currentColor">
-        <path d="M32 32c0-10 6-18 6-18s6 8 6 18-6 18-6 18-6-8-6-18z"/>
-        <path d="M32 32c-10 0-18 6-18 6s8 6 18 6 18-6 18-6-8-6-18-6z"/>
-        <path d="M32 32c-7-7-8-17-8-17s10 1 17 8 8 17 8 17-10-1-17-8z"/>
-        <path d="M32 32c7-7 8-17 8-17s-10 1-17 8-8 17-8 17 10-1 17-8z"/>
-      </g>
-      <circle cx="32" cy="32" r="5" fill="#FFC72C"/>
-    </symbol>
-  </defs>
-</svg>
 
 <script src="script.js"></script>
 </body>
