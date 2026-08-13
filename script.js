@@ -52,28 +52,41 @@
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(pointer: fine)').matches;
 
-  /* Custom cursor — desktop mouse only, off for touch and reduced-motion */
+  /* Custom cursor — an arrow whose tip tracks the pointer and whose body rotates
+     to face the direction of travel. Desktop mouse only, off for touch/reduced-motion. */
   if (finePointer && !reduceMotion) {
-    var dot = document.getElementById('cursorDot');
-    var ring = document.getElementById('cursorRing');
+    var arrow = document.getElementById('cursorArrow');
     document.documentElement.classList.add('cursor-active');
 
-    var moveDot, moveRing;
+    var lastX = null, lastY = null, rotation = 0;
+    var moveX, moveY, rotateTo;
+
     if (window.gsap) {
-      moveDot = gsap.quickTo(dot, 'x', { duration: 0.05, ease: 'none' });
-      var moveDotY = gsap.quickTo(dot, 'y', { duration: 0.05, ease: 'none' });
-      moveRing = gsap.quickTo(ring, 'x', { duration: 0.35, ease: 'power3.out' });
-      var moveRingY = gsap.quickTo(ring, 'y', { duration: 0.35, ease: 'power3.out' });
-      document.addEventListener('mousemove', function (e) {
-        moveDot(e.clientX); moveDotY(e.clientY);
-        moveRing(e.clientX); moveRingY(e.clientY);
-      });
-    } else {
-      document.addEventListener('mousemove', function (e) {
-        dot.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px) translate(-50%,-50%)';
-        ring.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px) translate(-50%,-50%)';
-      });
+      moveX = gsap.quickTo(arrow, 'x', { duration: 0.15, ease: 'power2.out' });
+      moveY = gsap.quickTo(arrow, 'y', { duration: 0.15, ease: 'power2.out' });
+      rotateTo = gsap.quickTo(arrow, 'rotation', { duration: 0.35, ease: 'power3.out' });
     }
+
+    document.addEventListener('mousemove', function (e) {
+      var x = e.clientX, y = e.clientY;
+
+      if (lastX !== null) {
+        var dx = x - lastX, dy = y - lastY;
+        if (Math.hypot(dx, dy) > 2) {
+          var target = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+          var diff = ((target - rotation + 540) % 360) - 180;
+          rotation += diff;
+          if (rotateTo) rotateTo(rotation);
+        }
+      }
+      lastX = x; lastY = y;
+
+      if (moveX) {
+        moveX(x); moveY(y);
+      } else {
+        arrow.style.transform = 'translate(' + x + 'px,' + y + 'px) rotate(' + rotation + 'deg)';
+      }
+    });
 
     var hoverTargets = 'a, button, .gallery figure, .hero-media';
     document.addEventListener('mouseover', function (e) {
