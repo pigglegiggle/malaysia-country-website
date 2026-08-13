@@ -474,7 +474,6 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   .hero-cta, .nav-overlay, .nav-overlay a .t { transition: none; }
   .cursor-arrow { display: none !important; }
-  .reveal { opacity: 1 !important; transform: none !important; }
 }
 
 /* Custom cursor — an arrow that rotates to face the direction it's moving. Desktop pointer only. */
