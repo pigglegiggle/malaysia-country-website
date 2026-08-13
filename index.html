@@ -17,31 +17,17 @@
 
 <header class="site-header">
   <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle topic menu">
+      <span></span><span></span><span></span>
+    </button>
     <a class="brand" href="#top">
       <svg class="brand-hibiscus" viewBox="0 0 64 64" aria-hidden="true"><use href="#hibiscus"/></svg>
       <span>Malaysia</span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="primary-nav" id="primaryNav" aria-label="Topics">
-      <ol>
-        <li><a href="#topic-001">001 Country</a></li>
-        <li><a href="#topic-002">002 Population</a></li>
-        <li><a href="#topic-003">003 Languages</a></li>
-        <li><a href="#topic-004">004 Leadership</a></li>
-        <li><a href="#topic-005">005 Festivals</a></li>
-        <li><a href="#topic-006">006 Sports</a></li>
-        <li><a href="#topic-007">007 Entertainment</a></li>
-        <li><a href="#topic-008">008 Dress</a></li>
-        <li><a href="#topic-009">009 Health</a></li>
-        <li><a href="#topic-010">010 Personality</a></li>
-        <li><a href="#topic-011">011 Communication</a></li>
-        <li><a href="#topic-012">012 Environment</a></li>
-      </ol>
-    </nav>
   </div>
 </header>
+
+<div class="nav-backdrop" id="navBackdrop" hidden></div>
 
 <div id="top"></div>
 <section class="hero">
@@ -53,6 +39,25 @@
     <a class="hero-cta" href="#topic-001">Start exploring ↓</a>
   </div>
 </section>
+
+<div class="layout">
+<nav class="sidebar" id="primaryNav" aria-label="Topics">
+  <p class="sidebar-title">Topics</p>
+  <ol>
+    <li><a href="#topic-001"><span class="n">001</span> Asian Country</a></li>
+    <li><a href="#topic-002"><span class="n">002</span> Population</a></li>
+    <li><a href="#topic-003"><span class="n">003</span> Languages</a></li>
+    <li><a href="#topic-004"><span class="n">004</span> Leadership</a></li>
+    <li><a href="#topic-005"><span class="n">005</span> Festivals</a></li>
+    <li><a href="#topic-006"><span class="n">006</span> Sports</a></li>
+    <li><a href="#topic-007"><span class="n">007</span> Entertainment</a></li>
+    <li><a href="#topic-008"><span class="n">008</span> Dress</a></li>
+    <li><a href="#topic-009"><span class="n">009</span> Health</a></li>
+    <li><a href="#topic-010"><span class="n">010</span> Personality</a></li>
+    <li><a href="#topic-011"><span class="n">011</span> Communication</a></li>
+    <li><a href="#topic-012"><span class="n">012</span> Environment</a></li>
+  </ol>
+</nav>
 
 <main id="main">
 
@@ -321,6 +326,7 @@
   </section>
 
 </main>
+</div>
 
 <footer class="site-footer">
   <div class="footer-inner">
